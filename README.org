@@ -1,0 +1,22 @@
+#+TITLE:   doom-acme-theme
+#+DATE:    February 8, 2022
+#+SINCE:   v0.1.0
+#+STARTUP: inlineimages nofold
+
+* Description
+doom-acme-theme, a theme inspired by the acme and [[https://github.com/ianyepan/acme-emacs-theme][acme-theme.el]].
+
+* Prerequisites
++ doom-themes
+
+* Configuration
+To load the theme:
+#+begin_src elisp
+(load-theme 'doom-acme t)
+#+end_src
+
+To set the modeline to a brighter (acme) blue color:
+#+begin_src elisp
+(setq doom-acme-brighter-modeline t)
+(load-theme 'doom-acme t)
+#+end_src
