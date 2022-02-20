@@ -271,6 +271,8 @@ Can be an integer to determine the exact padding."
     :foreground green :background teal :weight 'normal :box '(:line-width 1 :color green))
    (magit-branch-remote-head
     :foreground green :background teal :weight 'bold :box '(:line-width 1 :color green))
-   (magit-branch-upstream :box '(:line-width 1 :color fg))))
+   (magit-branch-upstream :box '(:line-width 1 :color fg))
+   (diff-refine-added :background "#b8fcb8")
+   (diff-refine-removed :background "#f8a8a8")))
 
 ;;; doom-acme-theme.el ends here
