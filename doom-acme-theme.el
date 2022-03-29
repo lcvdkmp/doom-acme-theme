@@ -143,6 +143,7 @@ Can be an integer to determine the exact padding."
    ((font-lock-keyword-face &override) :weight 'bold)
    ((font-lock-constant-face &override) :weight 'bold)
    (hl-line :background base3)
+   (cursor :foreground fg)
    ((line-number &override) :foreground base6)
    ((line-number-current-line &override) :foreground fg :background region :weight 'bold)
    (mode-line
@@ -229,11 +230,23 @@ Can be an integer to determine the exact padding."
    (org-document-info-keyword :foreground dark-cyan :underline t)
    (org-cite :foreground cyan)
    (org-cite-key :foreground dark-cyan :underline t)
-   (org-level-1 :foreground fg)
+   (org-level-1 :foreground fg :inherit 'outline-1 :height 1.4)
    (org-headline-done :foreground green)
    (org-agenda-done :foreground green)
    (org-link :foreground blue :weight 'normal)
    (org-superstar-header-bullet :weight 'normal)
+   (org-scheduled :foreground fg)
+   (org-scheduled-today :foreground fg)
+   (org-time-grid :foreground blue)
+   (org-todo :box base6 :foreground blue :background bg2)
+   (org-done :box base6 :strike-through t)
+   (org-headline-done :strike-through t)
+
+   (org-ellipsis :foreground base6 :underline nil :height .6 :strike-through nil)
+
+   (org-agenda-date :height 2.0 :foreground base6 :weight 'normal)
+   (org-agenda-date-today :height 2.0 :underline t :foreground fg :slant 'normal :weight 'bold)
+   (org-agenda-date-weekend :height 2.0 :slant 'italic :weight 'light :foreground base6)
 
    ;;;; widget
    (widget-field :foreground fg :background base3)
@@ -245,7 +258,6 @@ Can be an integer to determine the exact padding."
    ;;;; notmuch
    (notmuch-message-summary-face :foreground teal)
    (notmuch-wash-cited-text :foreground base6)
-   (cursor :foreground fg)
 
    ;;;; which-key
    (which-key-command-description-face :foreground fg)
@@ -273,6 +285,15 @@ Can be an integer to determine the exact padding."
     :foreground green :background teal :weight 'bold :box '(:line-width 1 :color green))
    (magit-branch-upstream :box '(:line-width 1 :color fg))
    (diff-refine-added :background "#b8fcb8")
-   (diff-refine-removed :background "#f8a8a8")))
+   (diff-refine-removed :background "#f8a8a8")
+
+   ;;;; mu4e
+   (mu4e-unread-face :foreground fg)
+   (mu4e-header-highlight-face :background base3)
+   (mu4e-header-face :foreground base4)
+
+   ;;;; org-modern
+   ;; (org-modern-label :height 1.0 :box `(:color ,bg :line-width 0))
+   ))
 
 ;;; doom-acme-theme.el ends here
